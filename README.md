@@ -1,5 +1,6 @@
 # rockets-app
-Sample Vue js app for state management
+Sample Vue js app. Component Hierarchy.
+State management using Vuex
 
 ## Project setup
 ```
