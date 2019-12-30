@@ -1,7 +1,10 @@
 <template>
   <section>
-    <new-rocket-form></new-rocket-form>
-    <rocket-list :rockets="rockets"></rocket-list>
+    <new-rocket-form :addRocket="addRocket"></new-rocket-form>
+    <rocket-list
+      :rockets="rockets"
+      :removeRocket="removeRocket"
+      ></rocket-list>
   </section>
 </template>
 
@@ -23,6 +26,15 @@ export default {
     this.rockets = await API.getRockets();
     console.log(this.rockets);
   },
+  methods: {
+    addRocket(rocket) {
+      this.rockets.push(rocket);
+    },
+    removeRocket(rocket) {
+      const index = this.rockets.indexOf(rocket);
+      this.rockets.splice(index, 1);
+    }
+  }
 };
 </script>
 

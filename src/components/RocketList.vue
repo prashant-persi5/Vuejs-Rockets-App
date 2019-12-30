@@ -1,6 +1,9 @@
 <template>
-  <section>
-    <rocket v-for="rocket in rockets" :key="rocket.name" :rocket="rocket"></rocket>
+  <section class="row">
+    <rocket v-for="rocket in rockets"
+    :key="rocket.name"
+    :rocket="rocket"
+    :removeRocket="removeRocket"></rocket>
   </section>
 </template>
 
@@ -12,6 +15,6 @@ export default {
   components: {
     Rocket,
   },
-  props: ['rockets'],
+  props: ['rockets', 'removeRocket'],
 };
 </script>
