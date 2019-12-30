@@ -1,4 +1,5 @@
 # rockets-app
+Sample Vue js app for state management
 
 ## Project setup
 ```
